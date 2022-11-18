@@ -12,8 +12,8 @@ class KSampleController(private val sampleService: SampleService) {
 
     @GetMapping("/test/{samplePathVariable}")
     fun getSampleList(@PathVariable samplePathVariable: String): Map<String, Any> = when (samplePathVariable) {
-        "right-path-value" -> hashMapOf("returnedListKey_kotlin" to sampleService.sampleList)
-        else -> hashMapOf()
+        "right-path-value" -> mapOf("returnedListKey_kotlin" to sampleService.sampleList)
+        else -> mapOf()
     }
 
 }
